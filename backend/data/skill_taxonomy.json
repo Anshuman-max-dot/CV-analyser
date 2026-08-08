@@ -1,0 +1,66 @@
+{
+  "categories": {
+    "Programming": [
+      {"name": "Python", "aliases": ["python", "python3", "py"]},
+      {"name": "Java", "aliases": ["java", "jdk", "j2ee"]},
+      {"name": "C++", "aliases": ["c++", "cpp", "cplusplus"]},
+      {"name": "JavaScript", "aliases": ["javascript", "js", "ecmascript"]},
+      {"name": "TypeScript", "aliases": ["typescript", "ts"]},
+      {"name": "Go", "aliases": ["golang", "go"]},
+      {"name": "Rust", "aliases": ["rust", "rustlang"]},
+      {"name": "SQL", "aliases": ["sql", "tsql", "plsql"]}
+    ],
+    "AI_ML": [
+      {"name": "Machine Learning", "aliases": ["machine learning", "ml", "machine-learning"]},
+      {"name": "Deep Learning", "aliases": ["deep learning", "dl", "deep-learning"]},
+      {"name": "NLP", "aliases": ["nlp", "natural language processing", "text mining"]},
+      {"name": "Computer Vision", "aliases": ["computer vision", "cv", "image processing", "opencv"]},
+      {"name": "Generative AI", "aliases": ["generative ai", "genai", "gen-ai"]},
+      {"name": "LLM", "aliases": ["llm", "large language model", "llms", "gpt", "bert", "transformers"]},
+      {"name": "RAG", "aliases": ["rag", "retrieval augmented generation", "retrieval-augmented generation"]},
+      {"name": "MLOps", "aliases": ["mlops", "ml ops", "model deployment", "mlflow", "kubeflow"]}
+    ],
+    "Frameworks": [
+      {"name": "TensorFlow", "aliases": ["tensorflow", "tf"]},
+      {"name": "PyTorch", "aliases": ["pytorch", "torch"]},
+      {"name": "Keras", "aliases": ["keras"]},
+      {"name": "Scikit-learn", "aliases": ["scikit-learn", "scikit learn", "sklearn"]},
+      {"name": "spaCy", "aliases": ["spacy"]},
+      {"name": "NLTK", "aliases": ["nltk", "natural language toolkit"]},
+      {"name": "Hugging Face", "aliases": ["huggingface", "hugging face", "diffusers", "transformers"]}
+    ],
+    "Web": [
+      {"name": "React", "aliases": ["react", "reactjs", "react.js"]},
+      {"name": "Node.js", "aliases": ["nodejs", "node.js", "node js", "node"]},
+      {"name": "FastAPI", "aliases": ["fastapi", "fast-api"]},
+      {"name": "Flask", "aliases": ["flask"]},
+      {"name": "Django", "aliases": ["django"]},
+      {"name": "REST APIs", "aliases": ["rest api", "rest apis", "restful", "restful api", "rest"]}
+    ],
+    "Database": [
+      {"name": "PostgreSQL", "aliases": ["postgresql", "postgres"]},
+      {"name": "MySQL", "aliases": ["mysql"]},
+      {"name": "MongoDB", "aliases": ["mongodb", "mongo"]},
+      {"name": "Redis", "aliases": ["redis"]},
+      {"name": "Vector DB", "aliases": ["vector db", "vector database", "chromadb", "pinecone", "milvus", "qdrant", "faiss"]}
+    ],
+    "Cloud": [
+      {"name": "AWS", "aliases": ["aws", "amazon web services", "s3", "ec2", "lambda"]},
+      {"name": "Azure", "aliases": ["azure", "microsoft azure"]},
+      {"name": "GCP", "aliases": ["gcp", "google cloud", "google cloud platform"]}
+    ],
+    "DevOps": [
+      {"name": "Docker", "aliases": ["docker", "containerization", "containers"]},
+      {"name": "Kubernetes", "aliases": ["kubernetes", "k8s"]},
+      {"name": "CI/CD", "aliases": ["ci/cd", "cicd", "continuous integration", "github actions", "gitlab ci"]},
+      {"name": "Git", "aliases": ["git", "github", "gitlab", "version control"]}
+    ],
+    "Data": [
+      {"name": "Pandas", "aliases": ["pandas"]},
+      {"name": "NumPy", "aliases": ["numpy"]},
+      {"name": "Power BI", "aliases": ["power bi", "powerbi", "dax"]},
+      {"name": "Tableau", "aliases": ["tableau", "tableau public"]},
+      {"name": "Data Visualization", "aliases": ["data visualization", "dataviz", "matplotlib", "seaborn", "plotly"]}
+    ]
+  }
+}

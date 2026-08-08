@@ -1,0 +1,53 @@
+{
+  "roles": {
+    "AI/ML Engineer": {
+      "title": "AI/ML Engineer",
+      "required_skills": ["Python", "Machine Learning", "Deep Learning", "TensorFlow", "PyTorch", "NLP", "SQL", "Git", "REST APIs", "Docker"],
+      "preferred_skills": ["MLOps", "LLM", "RAG", "Vector DB", "AWS", "Kubernetes", "CI/CD"],
+      "min_experience_years": 2,
+      "project_min_count": 3
+    },
+    "Data Scientist": {
+      "title": "Data Scientist",
+      "required_skills": ["Python", "Machine Learning", "SQL", "Pandas", "NumPy", "Scikit-learn", "Data Visualization", "Git"],
+      "preferred_skills": ["Deep Learning", "NLP", "Power BI", "Tableau", "AWS", "Docker", "RAG"],
+      "min_experience_years": 2,
+      "project_min_count": 2
+    },
+    "Data Analyst": {
+      "title": "Data Analyst",
+      "required_skills": ["SQL", "Python", "Pandas", "Power BI", "Tableau", "Data Visualization", "Excel"],
+      "preferred_skills": ["NumPy", "Scikit-learn", "Git", "PostgreSQL", "AWS"],
+      "min_experience_years": 1,
+      "project_min_count": 2
+    },
+    "Backend Developer": {
+      "title": "Backend Developer",
+      "required_skills": ["Python", "FastAPI", "Node.js", "SQL", "PostgreSQL", "MongoDB", "REST APIs", "Git", "Docker"],
+      "preferred_skills": ["Redis", "AWS", "CI/CD", "Kubernetes", "Linux"],
+      "min_experience_years": 2,
+      "project_min_count": 2
+    },
+    "Full Stack Developer": {
+      "title": "Full Stack Developer",
+      "required_skills": ["JavaScript", "TypeScript", "React", "Node.js", "SQL", "MongoDB", "REST APIs", "Git", "Docker"],
+      "preferred_skills": ["FastAPI", "PostgreSQL", "AWS", "CI/CD", "Redis"],
+      "min_experience_years": 2,
+      "project_min_count": 3
+    },
+    "Software Engineer": {
+      "title": "Software Engineer",
+      "required_skills": ["Python", "Java", "C++", "SQL", "Git", "REST APIs", "Docker", "Data Structures"],
+      "preferred_skills": ["React", "PostgreSQL", "AWS", "CI/CD", "Kubernetes"],
+      "min_experience_years": 2,
+      "project_min_count": 2
+    },
+    "NLP Engineer": {
+      "title": "NLP Engineer",
+      "required_skills": ["Python", "NLP", "spaCy", "NLTK", "PyTorch", "Hugging Face", "LLM", "RAG", "Git", "REST APIs"],
+      "preferred_skills": ["Vector DB", "Docker", "FastAPI", "MLOps", "AWS"],
+      "min_experience_years": 2,
+      "project_min_count": 3
+    }
+  }
+}
