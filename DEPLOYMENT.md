@@ -1,78 +1,41 @@
-# Free Deployment Guide: Render (Backend) & Vercel (Frontend)
+# Deployment Guide: Vercel & Render Setup
 
-This guide provides step-by-step instructions to deploy **SMARRTIF AI** for free.
-
----
-
-## Step 1: Push Code to GitHub
-
-1. Open your terminal in the project root directory:
-   ```bash
-   cd "/Users/Apple/Documents/Projects/CV Analyzer"
-   ```
-
-2. Initialize Git and commit your repository:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit of SMARRTIF AI profile analyzer"
-   ```
-
-3. Create a new repository on GitHub (e.g. `smarrtif-ai`) and push:
-   ```bash
-   git branch -M main
-   git remote add origin https://github.com/YOUR_GITHUB_USERNAME/smarrtif-ai.git
-   git push -u origin main
-   ```
+This guide provides step-by-step instructions to deploy **SMARRTIF AI**. You can deploy either as a single full-stack project on Vercel or with the Frontend on Vercel and Backend on Render/Railway.
 
 ---
 
-## Step 2: Deploy Backend on Render (Free Tier)
+## ⚡ Option 1: Full-Stack One-Click Vercel Deployment (Recommended)
 
+Thanks to the root `vercel.json` and `api/index.py` serverless configuration, you can deploy the complete app (Frontend + FastAPI Backend) in 1 click directly on Vercel:
+
+1. Push your repository to GitHub.
+2. Go to [https://vercel.com/new](https://vercel.com/new).
+3. Import your GitHub repository.
+4. Leave **Root Directory** as `./` (the root).
+5. Click **Deploy**. Vercel will build the React Vite frontend and serve the FastAPI backend API at `/api/*`.
+
+---
+
+## 🌐 Option 2: Vercel (Frontend) + Render (Backend)
+
+If you prefer a dedicated Python instance for heavy processing or background tasks:
+
+### Step 1: Deploy Backend on Render (Free Tier)
 1. Sign up/log in at [https://render.com](https://render.com).
 2. Click **New +** ➔ Select **Web Service**.
-3. Connect your GitHub repository `smarrtif-ai`.
-4. Configure the Web Service settings:
-   - **Name**: `smarrtif-ai-backend`
-   - **Region**: Choose closest region (e.g. Oregon or Frankfurt)
+3. Connect your GitHub repository.
+4. Configure Web Service settings:
    - **Root Directory**: `backend`
    - **Runtime**: `Python 3`
-   - **Build Command**: 
-     ```bash
-     pip install -r requirements.txt && python -m spacy download en_core_web_sm
-     ```
-   - **Start Command**: 
-     ```bash
-     uvicorn main:app --host 0.0.0.0 --port $PORT
-     ```
-   - **Instance Type**: **Free**
+   - **Build Command**: `pip install -r requirements.txt && python -m spacy download en_core_web_sm`
+   - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+5. Click **Deploy Web Service** and copy your backend URL (e.g., `https://smarrtif-ai-backend.onrender.com`).
 
-5. Under **Environment Variables**, add:
-   - `PYTHON_VERSION`: `3.11.9`
-   - `MONGODB_URI`: *(Optional MongoDB Atlas URI or leave blank for persistent fallback)*
-   - `GITHUB_TOKEN`: *(Optional GitHub token)*
-
-6. Click **Deploy Web Service**.
-7. Once deployed, copy your Render backend URL (e.g. `https://smarrtif-ai-backend.onrender.com`).
-
----
-
-## Step 3: Deploy Frontend on Vercel (Free Tier)
-
-1. Sign up/log in at [https://vercel.com](https://vercel.com).
-2. Click **Add New...** ➔ **Project**.
-3. Import your GitHub repository `smarrtif-ai`.
-4. Configure the Project settings:
-   - **Framework Preset**: `Vite`
-   - **Root Directory**: Select `frontend` (Click Edit ➔ select `frontend` folder).
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-5. Under **Environment Variables**, add:
+### Step 2: Deploy Frontend on Vercel
+1. Go to [https://vercel.com/new](https://vercel.com/new).
+2. Import your GitHub repository.
+3. Select **Root Directory**: `frontend`.
+4. Under **Environment Variables**, add:
    - **Key**: `VITE_API_BASE_URL`
-   - **Value**: `https://smarrtif-ai-backend.onrender.com/api` *(Your Render backend URL + `/api`)*
-6. Click **Deploy**.
-
----
-
-## 🎉 Done!
-Your application will be live at `https://smarrtif-ai.vercel.app` communicating directly with your backend API on Render!
+   - **Value**: `https://smarrtif-ai-backend.onrender.com/api`
+5. Click **Deploy**.
